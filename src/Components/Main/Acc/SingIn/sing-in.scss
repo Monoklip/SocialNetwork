@@ -90,9 +90,6 @@
                 &:hover{
                     background: #255db6;
                 }
-                &:active{
-                    box-shadow: 2px 2px 5px black;
-                }
             }
         }
         .reg{
@@ -107,10 +104,6 @@
             &:hover{
                 background: #2a7e19;
             }
-            &:active{
-                background: #194e0e;
-            }
         }
-
     }
 }

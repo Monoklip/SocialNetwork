@@ -1,5 +1,5 @@
-// @import url('https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
 .header{
     width: 100%;
     height: 75px;
@@ -17,7 +17,10 @@
             color: white;
 
             &:active{
-                color: yellow;
+                color: orange;
+            }
+            &:hover{
+                font-size: 44px;
             }
         }
     }

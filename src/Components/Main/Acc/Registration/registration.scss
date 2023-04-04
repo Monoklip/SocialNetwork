@@ -8,6 +8,23 @@
     padding: 20px;
     box-sizing: border-box;
 
+    .registration-closeBtn{
+        position: relative;
+
+        button{
+            position: absolute;
+            right: 0;
+            border: none;
+            background: white;
+            font-weight: 900;
+            cursor: pointer;
+
+            &:hover{
+                color: red;
+            }
+        }
+    }
+
     .registration-title{
         text-align: center;
         font-family: sans-serif;
@@ -75,6 +92,40 @@
             width: 30%;
             height: 35px;
             border-radius: 5px;
+        }
+    }
+
+    .registration-sex{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .registration-sex-people{
+            width: 150px;
+            height: 35px;
+            border: 1px solid grey;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+    }
+
+    .registration-regBtn{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        button{
+            width: 180px;
+            height: 40px;
+            margin-top: 30px;
+            background: #00a400;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
         }
     }
 }

@@ -2,31 +2,40 @@ import { useEffect, useState } from "react";
 import Registration from "./Registration/Registration";
 import SingIn from "./SingIn/SingIn";
 
-const Acc = (props: { setAccountExit: any; }) => {
-
+const Acc = (props: {
+    setAccountExit: any;
+    users: any;
+    getUsers: any;
+    setEmail: any;
+    setPassword: any;
+    auditAcc: any;
+}) => {
     const [reg, setReg] = useState(false);
     const [singIn, setSingIn] = useState(true);
 
-    const [users, setUsers] = useState([]);
-    const [url, setUrl] = useState('http://localhost:3000/user');
-
-    const getUsers = async() => {
-        const response = await fetch(url);
-        const data = await response.json();
-
-        setUsers(data);
-    };
-
-    useEffect(()=>{
-        getUsers();
-    },[]);
-
-    return(
+    return (
         <>
-            {reg && <Registration />}
-            {singIn && <SingIn setReg={setReg} setSingIn={setSingIn} users={users} setAccountExit={props.setAccountExit}/>}
+            {reg && (
+                <Registration
+                    setReg={setReg}
+                    setSingIn={setSingIn}
+                    users={props.users}
+                    getUsers={props.getUsers}
+                />
+            )}
+            {singIn && (
+                <SingIn
+                    setReg={setReg}
+                    setSingIn={setSingIn}
+                    users={props.users}
+                    setAccountExit={props.setAccountExit}
+                    setEmail={props.setEmail}
+                    setPassword={props.setPassword}
+                    auditAcc={props.auditAcc}
+                />
+            )}
         </>
-    )
+    );
 };
 
 export default Acc;
